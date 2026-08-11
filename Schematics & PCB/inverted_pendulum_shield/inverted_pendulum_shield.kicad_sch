@@ -4,6 +4,10 @@
 	(generator_version "10.0")
 	(uuid "8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534")
 	(paper "A3")
+	(title_block
+		(title "Reaction-Wheel-Inverted-Pendulum Shield ")
+		(rev "1")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x01_Socket"
 			(pin_names
@@ -4391,6 +4395,18 @@
 		)
 	)
 	(rectangle
+		(start 163.576 83.058)
+		(end 256.286 179.578)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "0ccddc51-3b8f-4f83-b1e3-fed2f5dc77ce")
+	)
+	(rectangle
 		(start 316.23 114.3)
 		(end 392.43 156.21)
 		(stroke
@@ -4416,7 +4432,7 @@
 	)
 	(rectangle
 		(start 139.7 234.95)
-		(end 238.76 276.86)
+		(end 246.38 276.86)
 		(stroke
 			(width 0)
 			(type default)
@@ -4440,7 +4456,7 @@
 	)
 	(rectangle
 		(start 21.59 234.95)
-		(end 120.65 276.86)
+		(end 128.27 276.86)
 		(stroke
 			(width 0)
 			(type default)
@@ -4451,8 +4467,8 @@
 		(uuid "dfce0385-1136-4c49-b8c2-7bc564af915b")
 	)
 	(rectangle
-		(start 24.13 175.0059)
-		(end 73.66 213.36)
+		(start 36.83 144.5259)
+		(end 86.36 182.88)
 		(stroke
 			(width 0)
 			(type default)
@@ -4476,7 +4492,7 @@
 	)
 	(text "Banana Connectors with RPP"
 		(exclude_from_sim no)
-		(at 45.974 173.228 0)
+		(at 58.674 142.748 0)
 		(effects
 			(font
 				(size 2 2)
@@ -4494,7 +4510,7 @@
 		)
 		(uuid "251ee5c1-d216-446f-9626-6a8731b6b282")
 	)
-	(text "Current is regulated at 2.78A = VREF / (10 * 0.18)"
+	(text "Current is regulated at 2.96A = VREF / (10 * 0.169)"
 		(exclude_from_sim no)
 		(at 51.816 88.9 0)
 		(effects
@@ -4503,16 +4519,6 @@
 			)
 		)
 		(uuid "2f0e594d-8abe-480f-aa35-0dac2cefe335")
-	)
-	(text "Might need higher in case of H bridge Vdrop"
-		(exclude_from_sim no)
-		(at 222.758 238.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "46f3a83a-dc0a-4e36-be2d-ee600f38c8ef")
 	)
 	(text "Wheel Controls"
 		(exclude_from_sim no)
@@ -4564,6 +4570,16 @@
 		)
 		(uuid "ba6a167d-72ad-40b6-83e0-465309b5ea4e")
 	)
+	(text "Raspberry Pi Pico connections"
+		(exclude_from_sim no)
+		(at 187.96 81.28 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "e43c86df-da17-4555-8a1c-b947e50fa0b5")
+	)
 	(text "VDD from bench power supply (30V max)"
 		(exclude_from_sim no)
 		(at 42.926 275.082 0)
@@ -4593,7 +4609,7 @@
 		(uuid "2dde40b9-0c42-4d29-ba34-717c99e636c6")
 	)
 	(junction
-		(at 48.26 194.31)
+		(at 60.96 163.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3ba28157-0677-4880-81b1-d12bba7550bc")
@@ -4617,7 +4633,7 @@
 		(uuid "59955227-7638-44d1-b926-b30bccea00e4")
 	)
 	(junction
-		(at 48.26 205.74)
+		(at 60.96 175.26)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7c52e1b1-12fd-4b24-8925-a2f0de821750")
@@ -4671,7 +4687,7 @@
 		(uuid "a406808c-2182-469f-8925-f66e2d0be250")
 	)
 	(junction
-		(at 58.42 184.15)
+		(at 71.12 153.67)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a8911e3a-9b07-402e-b284-90861799a8e5")
@@ -4743,87 +4759,87 @@
 		(uuid "fa1350a4-bc46-4db9-8c4f-54564730db03")
 	)
 	(no_connect
-		(at 166.37 114.3)
+		(at 187.96 111.76)
 		(uuid "05157740-626d-4257-a84b-fa8bced7b5f5")
 	)
 	(no_connect
-		(at 166.37 134.62)
+		(at 187.96 132.08)
 		(uuid "0b2c8702-a250-4930-95d5-8d7a0db3eb5e")
 	)
 	(no_connect
-		(at 166.37 147.32)
+		(at 187.96 144.78)
 		(uuid "0d4ea4ad-858d-42bb-887c-399bb82bfb86")
 	)
 	(no_connect
-		(at 212.09 139.7)
+		(at 233.68 137.16)
 		(uuid "0e88de73-aa16-4d76-99e1-1d60062d79f3")
 	)
 	(no_connect
-		(at 166.37 149.86)
+		(at 187.96 147.32)
 		(uuid "17bb4458-c89e-452e-92c1-6b6de613b989")
 	)
 	(no_connect
-		(at 166.37 129.54)
+		(at 187.96 127)
 		(uuid "1b2a24dd-af85-4deb-8c1f-d784ddd48e63")
 	)
 	(no_connect
-		(at 166.37 116.84)
+		(at 187.96 114.3)
 		(uuid "1e8dc26a-003f-4d93-8ba3-a3e9d109da08")
 	)
 	(no_connect
-		(at 212.09 144.78)
+		(at 233.68 142.24)
 		(uuid "2250e51d-5e77-4c5c-b358-c359bd844918")
 	)
 	(no_connect
-		(at 212.09 127)
+		(at 233.68 124.46)
 		(uuid "2a9adf23-518c-4587-8d5b-44ddb1af3e46")
 	)
 	(no_connect
-		(at 166.37 127)
+		(at 187.96 124.46)
 		(uuid "2ff48995-aeb4-45bd-8349-02f0b204f730")
 	)
 	(no_connect
-		(at 166.37 142.24)
+		(at 187.96 139.7)
 		(uuid "5052266c-5690-499b-b440-c27c4d8f5da9")
 	)
 	(no_connect
-		(at 166.37 139.7)
+		(at 187.96 137.16)
 		(uuid "57bccec3-32b3-453c-9c54-7cd645284546")
 	)
 	(no_connect
-		(at 166.37 144.78)
+		(at 187.96 142.24)
 		(uuid "70990a31-1fe4-4dc9-ac24-35ce97130132")
 	)
 	(no_connect
-		(at 212.09 160.02)
+		(at 233.68 157.48)
 		(uuid "867c1d21-28e6-49b9-a097-c5872de66c45")
 	)
 	(no_connect
-		(at 212.09 154.94)
+		(at 233.68 152.4)
 		(uuid "b8c7565c-6ae2-477d-8001-ccc1246943ae")
 	)
 	(no_connect
-		(at 212.09 152.4)
+		(at 233.68 149.86)
 		(uuid "c5597415-71e8-4b50-851a-a5fbeafe3bcb")
 	)
 	(no_connect
-		(at 166.37 132.08)
+		(at 187.96 129.54)
 		(uuid "c62954df-263e-4b74-bd68-e5f1a6565f47")
 	)
 	(no_connect
-		(at 189.23 99.06)
+		(at 210.82 96.52)
 		(uuid "cba25b71-f9ca-4c6c-a4e8-c9c1fd386340")
 	)
 	(no_connect
-		(at 212.09 124.46)
+		(at 233.68 121.92)
 		(uuid "cf2d5771-50f3-4498-987b-cc770927916d")
 	)
 	(no_connect
-		(at 166.37 157.48)
+		(at 187.96 154.94)
 		(uuid "cf71d723-9480-4dc5-8922-51770aa302d8")
 	)
 	(no_connect
-		(at 166.37 137.16)
+		(at 187.96 134.62)
 		(uuid "f65a2481-d254-4c07-89aa-de76fc8d5857")
 	)
 	(wire
@@ -4908,7 +4924,7 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 172.72) (xy 189.23 173.99)
+			(xy 210.82 170.18) (xy 210.82 171.45)
 		)
 		(stroke
 			(width 0)
@@ -4928,7 +4944,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 191.77) (xy 48.26 194.31)
+			(xy 60.96 161.29) (xy 60.96 163.83)
 		)
 		(stroke
 			(width 0)
@@ -5058,7 +5074,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 184.15) (xy 43.18 184.15)
+			(xy 50.8 153.67) (xy 55.88 153.67)
 		)
 		(stroke
 			(width 0)
@@ -5078,7 +5094,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 160.02) (xy 166.37 160.02)
+			(xy 185.42 157.48) (xy 187.96 157.48)
 		)
 		(stroke
 			(width 0)
@@ -5118,7 +5134,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 132.08) (xy 215.9 132.08)
+			(xy 233.68 129.54) (xy 237.49 129.54)
 		)
 		(stroke
 			(width 0)
@@ -5128,7 +5144,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 205.74) (xy 48.26 205.74)
+			(xy 50.8 175.26) (xy 60.96 175.26)
 		)
 		(stroke
 			(width 0)
@@ -5168,7 +5184,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 194.31) (xy 58.42 194.31)
+			(xy 60.96 163.83) (xy 71.12 163.83)
 		)
 		(stroke
 			(width 0)
@@ -5198,7 +5214,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 121.92) (xy 166.37 121.92)
+			(xy 184.15 119.38) (xy 187.96 119.38)
 		)
 		(stroke
 			(width 0)
@@ -5238,7 +5254,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 184.15) (xy 67.31 184.15)
+			(xy 71.12 153.67) (xy 80.01 153.67)
 		)
 		(stroke
 			(width 0)
@@ -5258,7 +5274,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 194.31) (xy 48.26 196.85)
+			(xy 60.96 163.83) (xy 60.96 166.37)
 		)
 		(stroke
 			(width 0)
@@ -5278,7 +5294,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 204.47) (xy 48.26 205.74)
+			(xy 60.96 173.99) (xy 60.96 175.26)
 		)
 		(stroke
 			(width 0)
@@ -5398,7 +5414,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 124.46) (xy 166.37 124.46)
+			(xy 184.15 121.92) (xy 187.96 121.92)
 		)
 		(stroke
 			(width 0)
@@ -5528,7 +5544,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 96.52) (xy 184.15 99.06)
+			(xy 205.74 93.98) (xy 205.74 96.52)
 		)
 		(stroke
 			(width 0)
@@ -5598,7 +5614,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 205.74) (xy 48.26 208.28)
+			(xy 60.96 175.26) (xy 60.96 177.8)
 		)
 		(stroke
 			(width 0)
@@ -5688,7 +5704,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 149.86) (xy 215.9 149.86)
+			(xy 233.68 147.32) (xy 237.49 147.32)
 		)
 		(stroke
 			(width 0)
@@ -5758,7 +5774,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 152.4) (xy 166.37 152.4)
+			(xy 184.15 149.86) (xy 187.96 149.86)
 		)
 		(stroke
 			(width 0)
@@ -5808,7 +5824,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 137.16) (xy 217.17 137.16)
+			(xy 233.68 134.62) (xy 238.76 134.62)
 		)
 		(stroke
 			(width 0)
@@ -5868,7 +5884,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 129.54) (xy 215.9 129.54)
+			(xy 233.68 127) (xy 237.49 127)
 		)
 		(stroke
 			(width 0)
@@ -5878,7 +5894,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 96.52) (xy 194.31 99.06)
+			(xy 215.9 93.98) (xy 215.9 96.52)
 		)
 		(stroke
 			(width 0)
@@ -6008,7 +6024,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 154.94) (xy 166.37 154.94)
+			(xy 184.15 152.4) (xy 187.96 152.4)
 		)
 		(stroke
 			(width 0)
@@ -6068,7 +6084,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 134.62) (xy 217.17 134.62)
+			(xy 233.68 132.08) (xy 238.76 132.08)
 		)
 		(stroke
 			(width 0)
@@ -6168,7 +6184,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 184.15) (xy 58.42 186.69)
+			(xy 71.12 153.67) (xy 71.12 156.21)
 		)
 		(stroke
 			(width 0)
@@ -6188,7 +6204,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 184.15) (xy 58.42 184.15)
+			(xy 66.04 153.67) (xy 71.12 153.67)
 		)
 		(stroke
 			(width 0)
@@ -6276,7 +6292,7 @@
 	)
 	(global_label "LED_PWM_1"
 		(shape output)
-		(at 162.56 152.4 180)
+		(at 184.15 149.86 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6286,7 +6302,7 @@
 		)
 		(uuid "0cb3d864-36b5-4aab-8986-7af8117fbf7b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 148.8102 152.4 0)
+			(at 170.4002 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6300,7 +6316,7 @@
 	)
 	(global_label "IMU_SCL"
 		(shape output)
-		(at 217.17 137.16 0)
+		(at 238.76 134.62 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6310,7 +6326,7 @@
 		)
 		(uuid "1091ef67-4f87-42d1-af17-05c8047d0871")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 228.0171 137.16 0)
+			(at 249.6071 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6372,7 +6388,7 @@
 	)
 	(global_label "ADC0"
 		(shape input)
-		(at 215.9 149.86 0)
+		(at 237.49 147.32 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6382,7 +6398,7 @@
 		)
 		(uuid "42eb789f-2599-4972-846e-d5f621250a3d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 223.7233 149.86 0)
+			(at 245.3133 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6420,7 +6436,7 @@
 	)
 	(global_label "LED_PWM_2"
 		(shape output)
-		(at 162.56 154.94 180)
+		(at 184.15 152.4 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6430,7 +6446,7 @@
 		)
 		(uuid "6c537104-0703-45d9-b67a-1740b4ed8f65")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 148.8102 154.94 0)
+			(at 170.4002 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6444,7 +6460,7 @@
 	)
 	(global_label "IMU_RST"
 		(shape input)
-		(at 215.9 129.54 0)
+		(at 237.49 127 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6454,7 +6470,7 @@
 		)
 		(uuid "7427c7b3-aff0-4f03-a9fa-7abdf7340901")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 226.6866 129.54 0)
+			(at 248.2766 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6468,7 +6484,7 @@
 	)
 	(global_label "Motor Control 2"
 		(shape output)
-		(at 162.56 124.46 180)
+		(at 184.15 121.92 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6478,7 +6494,7 @@
 		)
 		(uuid "8af2b7ce-7b8e-4efc-adca-83d00d6032a1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 144.2747 124.46 0)
+			(at 165.8647 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6516,7 +6532,7 @@
 	)
 	(global_label "Controls Start"
 		(shape input)
-		(at 163.83 160.02 180)
+		(at 185.42 157.48 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6526,7 +6542,7 @@
 		)
 		(uuid "a6881170-4a7c-4801-8f50-f0a64a7c53fa")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 147.3589 160.02 0)
+			(at 168.9489 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6636,7 +6652,7 @@
 	)
 	(global_label "IMU_INT"
 		(shape input)
-		(at 215.9 132.08 0)
+		(at 237.49 129.54 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6646,7 +6662,7 @@
 		)
 		(uuid "d8bf957b-2259-4df3-8c46-a64ec1da53d4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 226.1424 132.08 0)
+			(at 247.7324 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6660,7 +6676,7 @@
 	)
 	(global_label "Motor Control 1"
 		(shape output)
-		(at 162.56 121.92 180)
+		(at 184.15 119.38 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6670,7 +6686,7 @@
 		)
 		(uuid "dc351d23-346b-45e8-9f3c-6a994194598c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 144.2747 121.92 0)
+			(at 165.8647 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6684,7 +6700,7 @@
 	)
 	(global_label "IMU_SDA"
 		(shape output)
-		(at 217.17 134.62 0)
+		(at 238.76 132.08 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6694,7 +6710,7 @@
 		)
 		(uuid "ec56abc7-4dcd-4eaa-9a28-311734c6ce6f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 228.0776 134.62 0)
+			(at 249.6676 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6718,7 +6734,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "04fe8fc1-8175-4b24-a6eb-72ac17ded514")
-		(property "Reference" "#PWR037"
+		(property "Reference" "#PWR025"
 			(at 214.63 276.86 0)
 			(hide yes)
 			(show_name no)
@@ -6779,7 +6795,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR037")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -6797,7 +6813,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "05f96718-ed5b-4a7c-beda-439283db67f7")
-		(property "Reference" "R20"
+		(property "Reference" "R9"
 			(at 217.17 252.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6819,7 +6835,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 212.852 254 90)
 			(hide yes)
 			(show_name no)
@@ -6861,7 +6877,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "R20")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -6878,7 +6894,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "061a9506-50e1-41db-a979-47ebb04512fa")
-		(property "Reference" "U3"
+		(property "Reference" "U2"
 			(at 52.07 239.776 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6952,7 +6968,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "U3")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -6969,7 +6985,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0982001f-50be-4e2d-bda1-ede13d93eb33")
-		(property "Reference" "D5"
+		(property "Reference" "D3"
 			(at 366.014 198.374 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7042,7 +7058,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "D5")
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -7060,7 +7076,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0c7e633c-0616-438d-8538-cd5d7af5d977")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR022"
 			(at 52.07 269.24 0)
 			(hide yes)
 			(show_name no)
@@ -7121,7 +7137,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR034")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -7231,7 +7247,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Zener")
-		(at 58.42 190.5 270)
+		(at 71.12 160.02 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7241,8 +7257,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "15cc5862-9e7e-45b4-8287-578521d4b56d")
-		(property "Reference" "D3"
-			(at 60.96 189.2299 90)
+		(property "Reference" "D1"
+			(at 73.66 158.7499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7253,7 +7269,7 @@
 			)
 		)
 		(property "Value" "D_Zener"
-			(at 60.96 191.7699 90)
+			(at 73.66 161.2899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7264,7 +7280,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 58.42 190.5 0)
+			(at 71.12 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7275,7 +7291,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 58.42 190.5 0)
+			(at 71.12 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7286,7 +7302,7 @@
 			)
 		)
 		(property "Description" "Zener diode"
-			(at 58.42 190.5 0)
+			(at 71.12 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7305,7 +7321,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "D3")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -7323,7 +7339,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "16450715-2e69-487b-b255-8ecdb73d7c47")
-		(property "Reference" "C7"
+		(property "Reference" "C8"
 			(at 149.86 252.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7345,7 +7361,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 147.0152 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -7387,7 +7403,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "C7")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -7405,7 +7421,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "17724bbf-2d24-4f8d-bd0c-fe1eb6a19de9")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR019"
 			(at 146.05 247.65 0)
 			(hide yes)
 			(show_name no)
@@ -7465,7 +7481,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR011")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -7483,7 +7499,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "19eefa09-a7cf-4fd9-9198-a72e0d614673")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR021"
 			(at 226.06 252.73 0)
 			(hide yes)
 			(show_name no)
@@ -7543,7 +7559,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR01")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -7561,7 +7577,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "19f28e60-91a5-4ab1-9afc-49eb96022d4a")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR020"
 			(at 107.95 252.73 0)
 			(hide yes)
 			(show_name no)
@@ -7621,7 +7637,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR010")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -7661,7 +7677,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 204.1652 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -7720,7 +7736,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1c58ebe7-6869-43a9-88d7-f9a56bab82d2")
-		(property "Reference" "R18"
+		(property "Reference" "R3"
 			(at 348.742 129.54 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7742,7 +7758,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 346.71 133.858 90)
 			(hide yes)
 			(show_name no)
@@ -7784,7 +7800,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "R18")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -7824,7 +7840,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 39.0652 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -7884,7 +7900,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "20b946c3-dd8d-4a4f-8658-f29876add2e4")
-		(property "Reference" "R12"
+		(property "Reference" "R8"
 			(at 99.06 252.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7906,7 +7922,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 94.742 254 90)
 			(hide yes)
 			(show_name no)
@@ -7948,7 +7964,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "R12")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -7965,7 +7981,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "20be9c08-3cc9-49b3-be62-48766894cf41")
-		(property "Reference" "C5"
+		(property "Reference" "C3"
 			(at 68.58 238.506 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7985,7 +8001,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 64.77 246.0752 0)
 			(hide yes)
 			(show_name no)
@@ -8027,7 +8043,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "C5")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -8045,7 +8061,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "218ac7bd-74a4-4286-8426-56d899d36f40")
-		(property "Reference" "R14"
+		(property "Reference" "R7"
 			(at 374.65 205.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8067,7 +8083,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 370.332 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -8109,7 +8125,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "R14")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -8207,7 +8223,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "22f23b9b-6c9d-4b4e-bb67-e803bd3ee9d6")
-		(property "Reference" "R21"
+		(property "Reference" "R11"
 			(at 217.17 262.8899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8229,7 +8245,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 212.852 264.16 90)
 			(hide yes)
 			(show_name no)
@@ -8271,7 +8287,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "R21")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -8289,7 +8305,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "24567b67-c85a-44fe-8cff-e8a3db84d52a")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR02"
 			(at 38.1 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -8350,7 +8366,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR039")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -8358,7 +8374,7 @@
 	)
 	(symbol
 		(lib_id "power:VDD")
-		(at 67.31 184.15 0)
+		(at 80.01 153.67 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8368,8 +8384,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "247d0bba-6c7d-4a5c-af17-ef3e3ad8ee6f")
-		(property "Reference" "#PWR05"
-			(at 67.31 187.96 0)
+		(property "Reference" "#PWR013"
+			(at 80.01 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8380,7 +8396,7 @@
 			)
 		)
 		(property "Value" "VDD"
-			(at 67.31 179.07 0)
+			(at 80.01 148.59 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8390,7 +8406,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 67.31 184.15 0)
+			(at 80.01 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8401,7 +8417,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 67.31 184.15 0)
+			(at 80.01 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8412,7 +8428,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VDD\""
-			(at 67.31 184.15 0)
+			(at 80.01 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8428,7 +8444,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR05")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -8446,7 +8462,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2919afc9-68b8-4b39-aabe-958862c10be6")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR03"
 			(at 52.07 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -8507,7 +8523,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR012")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -8515,7 +8531,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 184.15 96.52 0)
+		(at 205.74 93.98 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8525,8 +8541,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "344a87e1-f84f-4732-b620-78542ea6fc69")
-		(property "Reference" "#PWR03"
-			(at 184.15 100.33 0)
+		(property "Reference" "#PWR07"
+			(at 205.74 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8537,7 +8553,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 184.15 91.44 0)
+			(at 205.74 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8547,7 +8563,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 184.15 96.52 0)
+			(at 205.74 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8558,7 +8574,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 184.15 96.52 0)
+			(at 205.74 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8569,7 +8585,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 184.15 96.52 0)
+			(at 205.74 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8585,7 +8601,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR03")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -8603,7 +8619,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3aae082c-97f9-4f7d-afc6-403ff84af890")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR016"
 			(at 372.11 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -8664,7 +8680,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR030")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -8672,7 +8688,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 194.31 96.52 0)
+		(at 215.9 93.98 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8682,8 +8698,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3ab5b2c9-2e44-4056-a53f-988721aa4539")
-		(property "Reference" "#PWR06"
-			(at 194.31 100.33 0)
+		(property "Reference" "#PWR08"
+			(at 215.9 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8694,7 +8710,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 194.31 91.44 0)
+			(at 215.9 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8704,7 +8720,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 194.31 96.52 0)
+			(at 215.9 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8715,7 +8731,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 194.31 96.52 0)
+			(at 215.9 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8726,7 +8742,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 194.31 96.52 0)
+			(at 215.9 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8742,7 +8758,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR06")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -8760,7 +8776,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4688a2ba-afa5-403b-849a-c8c84e9120f2")
-		(property "Reference" "C3"
+		(property "Reference" "C5"
 			(at 31.75 252.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8782,7 +8798,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 28.9052 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -8824,7 +8840,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "C3")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -8842,7 +8858,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4867663a-7a2d-40d3-b9a3-152188f1184f")
-		(property "Reference" "C6"
+		(property "Reference" "C7"
 			(at 111.76 252.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8853,7 +8869,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2x22uF"
+		(property "Value" "2x22uF (47uF)"
 			(at 111.76 255.2699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8864,7 +8880,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 108.9152 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -8906,7 +8922,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "C6")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -8923,7 +8939,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4951e621-453d-4a08-82f3-e5125c1cb932")
-		(property "Reference" "C8"
+		(property "Reference" "C4"
 			(at 186.69 238.506 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8943,7 +8959,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 182.88 246.0752 0)
 			(hide yes)
 			(show_name no)
@@ -8985,7 +9001,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "C8")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -8993,7 +9009,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x01_Socket")
-		(at 33.02 184.15 180)
+		(at 45.72 153.67 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9003,8 +9019,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5636d372-94f3-45ea-802c-de5f46772954")
-		(property "Reference" "J5"
-			(at 33.655 179.07 0)
+		(property "Reference" "J4"
+			(at 46.355 148.59 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9014,7 +9030,7 @@
 			)
 		)
 		(property "Value" "FCR7350R"
-			(at 33.655 181.61 0)
+			(at 46.355 151.13 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9024,7 +9040,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 33.02 184.15 0)
+			(at 45.72 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9035,7 +9051,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 33.02 184.15 0)
+			(at 45.72 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9046,7 +9062,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 33.02 184.15 0)
+			(at 45.72 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9062,7 +9078,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "J5")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -9079,7 +9095,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "56ccb81c-3d8f-43b1-b35f-458915df94e0")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR09"
 			(at 368.3 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -9139,7 +9155,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR08")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -9157,7 +9173,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5f9571d0-766d-47c5-ae4c-c5dd0b9a5222")
-		(property "Reference" "J2"
+		(property "Reference" "J3"
 			(at 355.6 74.9299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9179,7 +9195,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-04P_1x04_P5.00mm"
 			(at 353.06 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -9227,7 +9243,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "J2")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -9245,7 +9261,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "62246fe0-dfb9-49c5-ace3-7ada6c014ea6")
-		(property "Reference" "J3"
+		(property "Reference" "J1"
 			(at 355.6 57.1499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9267,7 +9283,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm"
 			(at 353.06 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -9309,7 +9325,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "J3")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -9327,7 +9343,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "62fb2585-e6fe-4774-afd9-3bfd7391b08d")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR011"
 			(at 336.55 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -9388,7 +9404,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR032")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -9428,7 +9444,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Radial_D5.0mm_H11.0mm_P2.00mm"
 			(at 51.7652 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -9488,7 +9504,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64c21d7d-8e59-44d3-b8a6-0813636eead5")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR018"
 			(at 27.94 247.65 0)
 			(hide yes)
 			(show_name no)
@@ -9548,7 +9564,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR09")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -9762,7 +9778,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "73542351-4800-40a1-a3d2-c29cb87cfc3c")
-		(property "Reference" "C4"
+		(property "Reference" "C6"
 			(at 88.9 252.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9784,7 +9800,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 86.0552 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -9826,7 +9842,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "C4")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -9834,7 +9850,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x01_Socket")
-		(at 33.02 205.74 180)
+		(at 45.72 175.26 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9844,8 +9860,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "75712e9e-8b9a-434b-9d1e-b4a44bc354ce")
-		(property "Reference" "J6"
-			(at 33.655 200.66 0)
+		(property "Reference" "J5"
+			(at 46.355 170.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9855,7 +9871,7 @@
 			)
 		)
 		(property "Value" "FCR7350B"
-			(at 33.655 203.2 0)
+			(at 46.355 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9865,7 +9881,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 33.02 205.74 0)
+			(at 45.72 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9876,7 +9892,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 33.02 205.74 0)
+			(at 45.72 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9887,7 +9903,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 33.02 205.74 0)
+			(at 45.72 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9903,7 +9919,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "J6")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -10014,7 +10030,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2x22uF"
+		(property "Value" "2x22uF (47uF)"
 			(at 229.87 255.2699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10025,7 +10041,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 227.0252 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -10085,7 +10101,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7f130453-5a77-461e-a3ea-c33acab668d0")
-		(property "Reference" "R19"
+		(property "Reference" "R10"
 			(at 99.06 262.8899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10107,7 +10123,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 94.742 264.16 90)
 			(hide yes)
 			(show_name no)
@@ -10149,7 +10165,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "R19")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -10167,7 +10183,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "908cb346-d115-4470-923b-b182202455ff")
-		(property "Reference" "R16"
+		(property "Reference" "R2"
 			(at 370.84 125.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10189,7 +10205,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 366.522 127 90)
 			(hide yes)
 			(show_name no)
@@ -10231,7 +10247,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "R16")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -10249,7 +10265,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "965a99e6-d74b-4b76-9ff7-eb33e4f49a8e")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR05"
 			(at 63.5 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -10310,7 +10326,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR038")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -10318,7 +10334,7 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:PMOS")
-		(at 48.26 186.69 90)
+		(at 60.96 156.21 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10329,7 +10345,7 @@
 		(fields_autoplaced yes)
 		(uuid "9b4b939e-04ee-4579-b843-fbb3251eaaeb")
 		(property "Reference" "Q1"
-			(at 48.26 177.8 90)
+			(at 60.96 147.32 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10339,7 +10355,7 @@
 			)
 		)
 		(property "Value" "PMOS"
-			(at 48.26 180.34 90)
+			(at 60.96 149.86 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10349,7 +10365,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 45.72 181.61 0)
+			(at 58.42 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10360,7 +10376,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 60.96 186.69 0)
+			(at 73.66 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10371,7 +10387,7 @@
 			)
 		)
 		(property "Description" "P-MOSFET transistor, drain/source/gate"
-			(at 48.26 186.69 0)
+			(at 60.96 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10382,7 +10398,7 @@
 			)
 		)
 		(property "Sim.Device" "PMOS"
-			(at 65.405 186.69 0)
+			(at 78.105 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10393,7 +10409,7 @@
 			)
 		)
 		(property "Sim.Type" "VDMOS"
-			(at 67.31 186.69 0)
+			(at 80.01 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10404,7 +10420,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 63.5 186.69 0)
+			(at 76.2 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10444,7 +10460,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a27114a9-649c-4b5e-a72e-56d78a573d17")
-		(property "Reference" "R22"
+		(property "Reference" "R1"
 			(at 77.47 73.6599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10455,7 +10471,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.18"
+		(property "Value" "0.169"
 			(at 77.47 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10466,7 +10482,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 73.152 74.93 90)
 			(hide yes)
 			(show_name no)
@@ -10508,7 +10524,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "R22")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -10525,7 +10541,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cbfec6d8-e934-412f-9bc5-399553bb4020")
-		(property "Reference" "D4"
+		(property "Reference" "D2"
 			(at 366.014 181.864 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10598,7 +10614,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "D4")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -10616,7 +10632,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cd72aefb-562c-44ae-9d25-0ff26e260a4c")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR023"
 			(at 170.18 269.24 0)
 			(hide yes)
 			(show_name no)
@@ -10677,7 +10693,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR036")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -10775,7 +10791,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d252b8a9-32c7-40e4-a35c-de76a782ced3")
-		(property "Reference" "J4"
+		(property "Reference" "J2"
 			(at 91.44 59.6899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10797,7 +10813,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm"
 			(at 88.9 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -10839,7 +10855,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "J4")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -10857,7 +10873,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d38bdf5b-92c2-4fd8-aad1-46550bd91afa")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR06"
 			(at 344.17 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -10918,7 +10934,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR028")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -10936,7 +10952,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dca1b46e-76c6-4ea8-bacb-d6364a345d6b")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR024"
 			(at 96.52 276.86 0)
 			(hide yes)
 			(show_name no)
@@ -10997,7 +11013,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR035")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -11015,7 +11031,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "decc8a99-8e0e-4a20-9a6c-3a67a7468d96")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR017"
 			(at 372.11 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -11076,7 +11092,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR031")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -11093,7 +11109,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e0bb42ef-0598-4b89-acd3-37dcf5973a35")
-		(property "Reference" "U4"
+		(property "Reference" "U3"
 			(at 170.18 239.776 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11167,7 +11183,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "U4")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -11175,7 +11191,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 189.23 173.99 0)
+		(at 210.82 171.45 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11185,8 +11201,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e238c4a8-1f24-4bd3-b43c-ea7aaa426047")
-		(property "Reference" "#PWR027"
-			(at 189.23 180.34 0)
+		(property "Reference" "#PWR014"
+			(at 210.82 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11197,7 +11213,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 189.23 179.07 0)
+			(at 210.82 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11208,7 +11224,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 189.23 173.99 0)
+			(at 210.82 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11219,7 +11235,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 189.23 173.99 0)
+			(at 210.82 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11230,7 +11246,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 189.23 173.99 0)
+			(at 210.82 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11246,7 +11262,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR027")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -11254,7 +11270,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 48.26 200.66 0)
+		(at 60.96 170.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11264,8 +11280,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec7a66de-4180-4341-99f0-7eb50c7077f7")
-		(property "Reference" "R17"
-			(at 50.8 199.3899 0)
+		(property "Reference" "R5"
+			(at 63.5 168.9099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11276,7 +11292,7 @@
 			)
 		)
 		(property "Value" "?"
-			(at 50.8 201.9299 0)
+			(at 63.5 171.4499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11286,8 +11302,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 46.482 200.66 90)
+		(property "Footprint" ""
+			(at 59.182 170.18 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11298,7 +11314,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 200.66 0)
+			(at 60.96 170.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11309,7 +11325,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 48.26 200.66 0)
+			(at 60.96 170.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11328,7 +11344,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "R17")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -11346,7 +11362,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f25b184f-2d1d-440b-b746-93141873a972")
-		(property "Reference" "R13"
+		(property "Reference" "R6"
 			(at 374.65 189.2299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11368,7 +11384,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 370.332 190.5 90)
 			(hide yes)
 			(show_name no)
@@ -11410,7 +11426,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "R13")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -11418,7 +11434,7 @@
 	)
 	(symbol
 		(lib_id "MCU_Module:RaspberryPi_Pico")
-		(at 189.23 137.16 0)
+		(at 210.82 134.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11428,7 +11444,7 @@
 		(dnp no)
 		(uuid "f2f30ed6-00f5-4eb4-914c-5fc72e154d98")
 		(property "Reference" "A1"
-			(at 191.262 173.228 0)
+			(at 212.852 170.688 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11439,7 +11455,7 @@
 			)
 		)
 		(property "Value" "RaspberryPi_Pico"
-			(at 191.008 170.688 0)
+			(at 212.598 168.148 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11450,7 +11466,7 @@
 			)
 		)
 		(property "Footprint" "Module:RaspberryPi_Pico_Common_Unspecified"
-			(at 189.23 184.15 0)
+			(at 210.82 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11461,7 +11477,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf"
-			(at 189.23 186.69 0)
+			(at 210.82 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11472,7 +11488,7 @@
 			)
 		)
 		(property "Description" "Versatile and inexpensive microcontroller module powered by RP2040 dual-core Arm Cortex-M0+ processor up to 133 MHz, 264kB SRAM, 2MB QSPI flash; also supports Raspberry Pi Pico 2"
-			(at 189.23 189.23 0)
+			(at 210.82 186.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11613,7 +11629,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 48.26 208.28 0)
+		(at 60.96 177.8 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11623,8 +11639,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f5479065-28c8-4124-9645-85f9dcb9c3ba")
-		(property "Reference" "#PWR029"
-			(at 48.26 214.63 0)
+		(property "Reference" "#PWR015"
+			(at 60.96 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11635,7 +11651,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 48.26 213.36 0)
+			(at 60.96 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11646,7 +11662,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 208.28 0)
+			(at 60.96 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11657,7 +11673,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 208.28 0)
+			(at 60.96 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11668,7 +11684,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 48.26 208.28 0)
+			(at 60.96 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11684,7 +11700,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR029")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -11702,7 +11718,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f711da32-e738-4889-8053-7e5f8727f3e8")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR01"
 			(at 63.5 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -11762,7 +11778,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR02")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -11780,7 +11796,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f7294bd9-f6a4-4c05-b22f-eabac0b7ef2c")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR012"
 			(at 368.3 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -11841,7 +11857,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR033")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -11859,7 +11875,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fb62b445-b0f4-472c-a072-992858ce4229")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR010"
 			(at 336.55 127 0)
 			(hide yes)
 			(show_name no)
@@ -11919,7 +11935,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "#PWR07")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -11937,7 +11953,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fcf03036-cbb2-4eb0-bba1-03243d858e3c")
-		(property "Reference" "R15"
+		(property "Reference" "R4"
 			(at 339.09 140.9699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11959,7 +11975,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 334.772 142.24 90)
 			(hide yes)
 			(show_name no)
@@ -12001,7 +12017,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "R15")
+					(reference "R4")
 					(unit 1)
 				)
 			)
