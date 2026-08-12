@@ -3016,6 +3016,105 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Regulator_Switching:AP63201WU"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4602,8 +4701,8 @@
 		(uuid "0ccddc51-3b8f-4f83-b1e3-fed2f5dc77ce")
 	)
 	(rectangle
-		(start 340.36 232.41)
-		(end 387.35 246.38)
+		(start 340.36 231.14)
+		(end 387.35 245.11)
 		(stroke
 			(width 0)
 			(type default)
@@ -4624,6 +4723,18 @@
 			(type none)
 		)
 		(uuid "37570928-4b14-40e7-9cf7-65024890de1c")
+	)
+	(rectangle
+		(start 310.134 225.044)
+		(end 334.264 250.444)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "59a57954-74a9-4662-8ad0-8ca074a6d286")
 	)
 	(rectangle
 		(start 334.01 168.91)
@@ -4797,9 +4908,19 @@
 		)
 		(uuid "be64c679-6df6-4f06-980d-5226c0331c8f")
 	)
+	(text "Mounting Holes"
+		(exclude_from_sim no)
+		(at 321.31 223.52 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "bf6757a6-4b54-4cb0-95e5-e6af8a1f2653")
+	)
 	(text "ERC"
 		(exclude_from_sim no)
-		(at 343.408 230.632 0)
+		(at 343.408 229.362 0)
 		(effects
 			(font
 				(size 2 2)
@@ -7178,7 +7299,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "05f96718-ed5b-4a7c-beda-439283db67f7")
-		(property "Reference" "R9"
+		(property "Reference" "R10"
 			(at 231.14 252.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7242,7 +7363,7 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "R9")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -7424,6 +7545,82 @@
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
 					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 314.96 245.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0c1bb8fc-0cdd-4f47-b089-01bc847b0f47")
+		(property "Reference" "H4"
+			(at 317.5 243.8399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 317.5 246.3799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 314.96 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 314.96 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 314.96 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "inverted_pendulum_shield"
+				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
+					(reference "H4")
 					(unit 1)
 				)
 			)
@@ -8974,7 +9171,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 381 240.03 0)
+		(at 381 238.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8985,17 +9182,6 @@
 		(fields_autoplaced yes)
 		(uuid "29c11da2-5432-4a26-a367-6dfef39d311a")
 		(property "Reference" "#PWR027"
-			(at 381 246.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
 			(at 381 245.11 0)
 			(hide yes)
 			(show_name no)
@@ -9006,8 +9192,19 @@
 				)
 			)
 		)
+		(property "Value" "GND"
+			(at 381 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Footprint" ""
-			(at 381 240.03 0)
+			(at 381 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9018,7 +9215,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 381 240.03 0)
+			(at 381 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9029,7 +9226,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 381 240.03 0)
+			(at 381 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9053,7 +9250,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 381 240.03 0)
+		(at 381 238.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9063,7 +9260,7 @@
 		(dnp no)
 		(uuid "3041db54-6568-4d83-990b-b6da46d85cb5")
 		(property "Reference" "#FLG05"
-			(at 381 238.125 0)
+			(at 381 236.855 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9074,7 +9271,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 381 235.966 0)
+			(at 381 234.696 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9084,7 +9281,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 381 240.03 0)
+			(at 381 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9095,7 +9292,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 381 240.03 0)
+			(at 381 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9106,7 +9303,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 381 240.03 0)
+			(at 381 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9208,7 +9405,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 358.14 240.03 180)
+		(at 358.14 238.76 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9218,7 +9415,7 @@
 		(dnp no)
 		(uuid "3a069297-5b3b-47d7-8c77-097408906028")
 		(property "Reference" "#FLG03"
-			(at 358.14 241.935 0)
+			(at 358.14 240.665 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9229,7 +9426,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 358.14 244.094 0)
+			(at 358.14 242.824 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9239,7 +9436,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 358.14 240.03 0)
+			(at 358.14 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9250,7 +9447,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 358.14 240.03 0)
+			(at 358.14 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9261,7 +9458,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 358.14 240.03 0)
+			(at 358.14 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9678,6 +9875,82 @@
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
 					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 314.96 240.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "56140c4e-0822-431b-a506-6ac9e54730cd")
+		(property "Reference" "H3"
+			(at 317.5 238.7599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 317.5 241.2999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 314.96 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 314.96 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 314.96 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "inverted_pendulum_shield"
+				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -10443,6 +10716,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 314.96 229.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6db7ab40-52b0-4106-892b-e554acdd3024")
+		(property "Reference" "H1"
+			(at 317.5 228.5999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 317.5 231.1399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 314.96 229.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 314.96 229.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 314.96 229.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "inverted_pendulum_shield"
+				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 91.44 254 0)
 		(unit 1)
@@ -10695,7 +11044,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7f130453-5a77-461e-a3ea-c33acab668d0")
-		(property "Reference" "R10"
+		(property "Reference" "R9"
 			(at 105.41 262.8899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10759,7 +11108,83 @@
 		(instances
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
-					(reference "R10")
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 314.96 234.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "80263b78-f103-490c-b782-41ca4c31cd35")
+		(property "Reference" "H2"
+			(at 317.5 233.6799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 317.5 236.2199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 314.96 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 314.96 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 314.96 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "inverted_pendulum_shield"
+				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
+					(reference "H2")
 					(unit 1)
 				)
 			)
@@ -10928,7 +11353,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 346.71 240.03 180)
+		(at 346.71 238.76 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10938,7 +11363,7 @@
 		(dnp no)
 		(uuid "96d469f0-5199-4e15-9661-2dee3d22b360")
 		(property "Reference" "#FLG01"
-			(at 346.71 241.935 0)
+			(at 346.71 240.665 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10949,7 +11374,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 346.71 244.094 0)
+			(at 346.71 242.824 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10959,7 +11384,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 346.71 240.03 0)
+			(at 346.71 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10970,7 +11395,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 346.71 240.03 0)
+			(at 346.71 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10981,7 +11406,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 346.71 240.03 0)
+			(at 346.71 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11203,7 +11628,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 369.57 240.03 0)
+		(at 369.57 238.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11213,7 +11638,7 @@
 		(dnp no)
 		(uuid "b52477fd-a382-4b3b-a3ae-b700b4b8d4e3")
 		(property "Reference" "#PWR029"
-			(at 369.57 243.84 0)
+			(at 369.57 242.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11224,7 +11649,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 369.57 235.966 0)
+			(at 369.57 234.696 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11234,7 +11659,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 369.57 240.03 0)
+			(at 369.57 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11245,7 +11670,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 369.57 240.03 0)
+			(at 369.57 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11256,7 +11681,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 369.57 240.03 0)
+			(at 369.57 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11280,7 +11705,7 @@
 	)
 	(symbol
 		(lib_id "power:VDD")
-		(at 346.71 240.03 0)
+		(at 346.71 238.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11290,7 +11715,7 @@
 		(dnp no)
 		(uuid "cbdf5977-4ede-460b-9b23-59ef0cdfc9c4")
 		(property "Reference" "#PWR026"
-			(at 346.71 243.84 0)
+			(at 346.71 242.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11301,7 +11726,7 @@
 			)
 		)
 		(property "Value" "VDD"
-			(at 346.71 235.966 0)
+			(at 346.71 234.696 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11311,7 +11736,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 346.71 240.03 0)
+			(at 346.71 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11322,7 +11747,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 346.71 240.03 0)
+			(at 346.71 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11333,7 +11758,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VDD\""
-			(at 346.71 240.03 0)
+			(at 346.71 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11935,7 +12360,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 358.14 240.03 0)
+		(at 358.14 238.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11945,7 +12370,7 @@
 		(dnp no)
 		(uuid "deab8af2-2aa3-49a1-a492-ef5413ee49ad")
 		(property "Reference" "#PWR028"
-			(at 358.14 243.84 0)
+			(at 358.14 242.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11956,7 +12381,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 358.14 235.966 0)
+			(at 358.14 234.696 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11966,7 +12391,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 358.14 240.03 0)
+			(at 358.14 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11977,7 +12402,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 358.14 240.03 0)
+			(at 358.14 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11988,7 +12413,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 358.14 240.03 0)
+			(at 358.14 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12261,7 +12686,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 369.57 240.03 180)
+		(at 369.57 238.76 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12271,7 +12696,7 @@
 		(dnp no)
 		(uuid "e8d87b7c-01e7-4a99-8b58-f04b673e9c61")
 		(property "Reference" "#FLG04"
-			(at 369.57 241.935 0)
+			(at 369.57 240.665 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12282,7 +12707,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 369.57 244.094 0)
+			(at 369.57 242.824 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12292,7 +12717,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 369.57 240.03 0)
+			(at 369.57 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12303,7 +12728,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 369.57 240.03 0)
+			(at 369.57 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12314,7 +12739,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 369.57 240.03 0)
+			(at 369.57 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
