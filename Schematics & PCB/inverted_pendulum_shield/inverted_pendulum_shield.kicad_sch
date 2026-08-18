@@ -6,6 +6,7 @@
 	(paper "A3")
 	(title_block
 		(title "Reaction Wheel Inverted Pendulum Shield")
+		(date "2026-08-19")
 		(rev "2")
 		(company "Group 22")
 		(comment 1 "Designed by Luke jones")
@@ -4924,8 +4925,8 @@
 		(uuid "37570928-4b14-40e7-9cf7-65024890de1c")
 	)
 	(rectangle
-		(start 317.754 225.044)
-		(end 341.884 250.444)
+		(start 299.974 225.044)
+		(end 322.58 250.444)
 		(stroke
 			(width 0)
 			(type default)
@@ -4946,6 +4947,18 @@
 			(type none)
 		)
 		(uuid "a0b6430c-1302-4368-8f49-7c2fd7bbcec0")
+	)
+	(rectangle
+		(start 327.914 225.044)
+		(end 350.52 250.444)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "adeb0807-8c30-4be7-b010-ab38a0fba5a2")
 	)
 	(rectangle
 		(start 326.39 41.91)
@@ -5015,6 +5028,16 @@
 		)
 		(uuid "222c5aa2-6a64-438a-a87a-2f073c0a3975")
 	)
+	(text "M2"
+		(exclude_from_sim no)
+		(at 329.692 249.428 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "2d7c707e-be2b-4f8e-891d-affb524fcb22")
+	)
 	(text "Current is regulated at 2.96A = VREF / (10 * 0.169)"
 		(exclude_from_sim no)
 		(at 53.34 98.044 0)
@@ -5047,7 +5070,7 @@
 	)
 	(text "M3"
 		(exclude_from_sim no)
-		(at 319.532 249.428 0)
+		(at 301.752 249.428 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5074,6 +5097,16 @@
 			)
 		)
 		(uuid "7831f338-0e52-4d97-a0ca-5af158dacf64")
+	)
+	(text "Wire Holes"
+		(exclude_from_sim no)
+		(at 335.534 223.52 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "9967861d-38ea-4f12-bc61-5d9ba6bc75cf")
 	)
 	(text "Controls feedback with LEDs"
 		(exclude_from_sim no)
@@ -5107,7 +5140,7 @@
 	)
 	(text "Mounting Holes"
 		(exclude_from_sim no)
-		(at 328.93 223.52 0)
+		(at 311.15 223.52 0)
 		(effects
 			(font
 				(size 2 2)
@@ -7767,7 +7800,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 322.58 245.11 0)
+		(at 304.8 245.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7778,7 +7811,7 @@
 		(fields_autoplaced yes)
 		(uuid "0c1bb8fc-0cdd-4f47-b089-01bc847b0f47")
 		(property "Reference" "H4"
-			(at 325.12 243.8399 0)
+			(at 307.34 243.8399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7789,7 +7822,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 325.12 246.3799 0)
+			(at 307.34 246.3799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7800,7 +7833,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 322.58 245.11 0)
+			(at 304.8 245.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7811,7 +7844,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 322.58 245.11 0)
+			(at 304.8 245.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7822,7 +7855,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 322.58 245.11 0)
+			(at 304.8 245.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9769,6 +9802,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 332.74 245.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3f97146e-ebd0-439a-81e4-53cf8a224037")
+		(property "Reference" "H8"
+			(at 335.28 243.8399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 335.28 246.3799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 332.74 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 332.74 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 332.74 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "inverted_pendulum_shield"
+				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
+					(reference "H8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 34.29 254 0)
 		(unit 1)
@@ -10014,6 +10123,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 332.74 240.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "518da477-93f8-4957-8a5c-e7b2d47066b8")
+		(property "Reference" "H7"
+			(at 335.28 238.7599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 335.28 241.2999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 332.74 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 332.74 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 332.74 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "inverted_pendulum_shield"
+				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
+					(reference "H7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 62.23 35.56 0)
 		(unit 1)
@@ -10097,7 +10282,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 322.58 240.03 0)
+		(at 332.74 229.87 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10106,9 +10291,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "56140c4e-0822-431b-a506-6ac9e54730cd")
-		(property "Reference" "H3"
-			(at 325.12 238.7599 0)
+		(uuid "544ed967-62c3-4e22-b749-5797446e6db8")
+		(property "Reference" "H5"
+			(at 335.28 228.5999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10119,7 +10304,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 325.12 241.2999 0)
+			(at 335.28 231.1399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10130,7 +10315,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 322.58 240.03 0)
+			(at 332.74 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10141,7 +10326,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 322.58 240.03 0)
+			(at 332.74 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10152,7 +10337,83 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 322.58 240.03 0)
+			(at 332.74 229.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "inverted_pendulum_shield"
+				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
+					(reference "H5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 304.8 240.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "56140c4e-0822-431b-a506-6ac9e54730cd")
+		(property "Reference" "H3"
+			(at 307.34 238.7599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 307.34 241.2999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 304.8 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 304.8 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 304.8 240.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10203,7 +10464,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector:Banana_Cliff_FCR7350R_S16N-PC_Horizontal"
+		(property "Footprint" "Connector_Wire:SolderWirePad_1x01_SMD_4x8mm"
 			(at 34.29 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -10931,7 +11192,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 322.58 229.87 0)
+		(at 304.8 229.87 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10942,7 +11203,7 @@
 		(fields_autoplaced yes)
 		(uuid "6db7ab40-52b0-4106-892b-e554acdd3024")
 		(property "Reference" "H1"
-			(at 325.12 228.5999 0)
+			(at 307.34 228.5999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10953,7 +11214,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 325.12 231.1399 0)
+			(at 307.34 231.1399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10964,7 +11225,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 322.58 229.87 0)
+			(at 304.8 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10975,7 +11236,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 322.58 229.87 0)
+			(at 304.8 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10986,7 +11247,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 322.58 229.87 0)
+			(at 304.8 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11119,7 +11380,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector:Banana_Cliff_FCR7350B_S16N-PC_Horizontal"
+		(property "Footprint" "Connector_Wire:SolderWirePad_1x01_SMD_4x8mm"
 			(at 34.29 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -11442,7 +11703,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 322.58 234.95 0)
+		(at 304.8 234.95 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11453,7 +11714,7 @@
 		(fields_autoplaced yes)
 		(uuid "80263b78-f103-490c-b782-41ca4c31cd35")
 		(property "Reference" "H2"
-			(at 325.12 233.6799 0)
+			(at 307.34 233.6799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11464,7 +11725,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 325.12 236.2199 0)
+			(at 307.34 236.2199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11475,7 +11736,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 322.58 234.95 0)
+			(at 304.8 234.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11486,7 +11747,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 322.58 234.95 0)
+			(at 304.8 234.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11497,7 +11758,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 322.58 234.95 0)
+			(at 304.8 234.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11707,7 +11968,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 166.37 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -12033,7 +12294,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TO-252-2_TabPin1"
+		(property "Footprint" "Package_TO_SOT_SMD:TO-252-2"
 			(at 45.72 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -12469,6 +12730,82 @@
 			(project "inverted_pendulum_shield"
 				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
 					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 332.74 234.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "af126863-7e8c-4434-96cc-fd84f9587dec")
+		(property "Reference" "H6"
+			(at 335.28 233.6799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 335.28 236.2199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 332.74 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 332.74 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 332.74 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "inverted_pendulum_shield"
+				(path "/8bd39a36-dbe9-4c6c-8f7f-ff6ae54e0534"
+					(reference "H6")
 					(unit 1)
 				)
 			)
@@ -13561,7 +13898,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 120.65 248.92 0)
 			(hide yes)
 			(show_name no)
