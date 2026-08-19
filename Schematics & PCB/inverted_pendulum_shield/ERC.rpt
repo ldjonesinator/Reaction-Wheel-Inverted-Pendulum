@@ -1,0 +1,37 @@
+ERC report (2026-08-19T12:16:36, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+[lib_symbol_mismatch]: Symbol 'AP63201WU' doesn't match copy in library 'Regulator_Switching'
+    ; warning
+    @(2300 mils, 9800 mils): Symbol U2 [AP63201WU]
+[lib_symbol_mismatch]: Symbol 'RaspberryPi_Pico' doesn't match copy in library 'MCU_Module'
+    ; warning
+    @(8300 mils, 5300 mils): Symbol A1 [RaspberryPi_Pico]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'my_switches'
+    ; warning
+    @(14450 mils, 5350 mils): Symbol SW1 [Right angle Tact Switch 2-1825027-0]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(14450 mils, 5350 mils): Symbol SW1 Pin 1 [Unspecified, Line]
+    @(14350 mils, 4750 mils): Symbol R5 Pin 2 [Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(14450 mils, 5450 mils): Symbol SW1 Pin 3 [Unspecified, Line]
+    @(14750 mils, 5600 mils): Symbol #PWR014 Pin 1 [Power input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(15050 mils, 5350 mils): Symbol SW1 Pin 2 [Unspecified, Line]
+    @(15050 mils, 5450 mils): Symbol SW1 Pin 4 [Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(15050 mils, 5450 mils): Symbol SW1 Pin 4 [Unspecified, Line]
+    @(14750 mils, 5600 mils): Symbol #PWR014 Pin 1 [Power input, Line]
+
+ ** ERC messages: 7  Errors 0  Warnings 7
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters
