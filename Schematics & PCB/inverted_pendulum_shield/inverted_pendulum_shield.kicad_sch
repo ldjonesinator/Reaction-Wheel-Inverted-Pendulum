@@ -6932,6 +6932,16 @@
 		)
 		(uuid "fb5fab86-c662-48eb-9b2e-84e49cadc226")
 	)
+	(label "VM"
+		(at 73.66 58.42 270)
+		(effects
+			(font
+				(size 0.635 0.635)
+			)
+			(justify right bottom)
+		)
+		(uuid "0d4c149b-f747-4e8d-aecf-954e66ffecb6")
+	)
 	(label "OUT1"
 		(at 85.09 69.85 0)
 		(effects
