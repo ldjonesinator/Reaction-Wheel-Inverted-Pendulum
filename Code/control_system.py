@@ -28,7 +28,7 @@ if __name__ == "__main__":
 	while True:
 		heading, roll, pitch = imu.get_angle_data()
 		dt = time.time_ns() // 1_000_000 - prev_time
-		control, error, integral = PID_controller(heading, REF_ANGLE, error, integral,
+		control, error, integral = PID_controller(pitch, REF_ANGLE, error, integral,
 												  dt, KP, KD, KI)
 
 		motor.set_speed(control) # have to change this after testing
