@@ -2,10 +2,25 @@ import board
 import digitalio
 import time
 import pwmio
+import analogio
 
-PWM_IN1 = pwmio.PWMOut(board.GP13, frequency=1000, duty_cycle=0)
-PWM_IN2 = pwmio.PWMOut(board.GP14, frequency=1000, duty_cycle=0)
+PIN_RES = 65535
 
+MOTOR_SW_PIN = digitalio.DigitalInOut(board.GP17)
+MOTOR_SW_PIN.direction = digitalio.Direction.OUTPUT
+MOTOR_SW_PIN.value = False
+
+LED_PIN = digitalio.DigitalInOut(board.GP11)
+LED_PIN.direction = digitalio.Direction.OUTPUT
+LED_PIN.value = True
+
+PWM_IN1 = pwmio.PWMOut(board.GP20, frequency=1000, duty_cycle=0)
+PWM_IN2 = pwmio.PWMOut(board.GP21, frequency=1000, duty_cycle=0)
+
+ADC_MOTOR = analogio.AnalogIn(board.A1)
+
+H_BRIDGE_VL = 12 * 10 / 92
+H_BRIDGE_VH = 12.5 * 10 / 92
 
 
 def set_speed(speed):
@@ -17,12 +32,12 @@ def set_speed(speed):
     if speed > 0:
         #Forward
         PWM_IN2.duty_cycle = 0
-        PWM_IN1.duty_cycle = int(speed * 65535 / 100)
+        PWM_IN1.duty_cycle = int(speed * PIN_RES / 100)
 
     elif speed < 0:
         #Reverse
         PWM_IN1.duty_cycle = 0
-        PWM_IN2.duty_cycle = int(abs(speed) * 65535 / 100)
+        PWM_IN2.duty_cycle = int(abs(speed) * PIN_RES / 100)
 
     else:
         #Stop
@@ -30,19 +45,35 @@ def set_speed(speed):
         PWM_IN2.duty_cycle = 0
 
 
+def get_voltage():
+    voltage = (ADC_MOTOR.value * 3.3) / PIN_RES
+    return (voltage >= H_BRIDGE_VL and voltage <= H_BRIDGE_VH)
+
+def turn_led_on(on):
+    LED_PIN.value = on
+
 
 
 
 while True:
 
-    print("Forward 70%")
-    set_speed(70)
-    time.sleep(3)
+    if get_voltage():
+        turn_led_on(False)
+        MOTOR_SW_PIN.value = True
+    else:
+        turn_led_on(True)
+        MOTOR_SW_PIN.value = False
 
-    print("Reverse 70%")
-    set_speed(90)
-    time.sleep(3)
 
-    print("Stop")
+
+    set_speed(25)
+    time.sleep(10)
+
+    set_speed(0)
+    time.sleep(2)
+
+    set_speed(-25)
+    time.sleep(10)
+
     set_speed(0)
     time.sleep(2)
