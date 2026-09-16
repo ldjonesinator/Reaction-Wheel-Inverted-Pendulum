@@ -1,0 +1,65 @@
+** Drc report for inverted_pendulum_shield.kicad_pcb **
+** Created on 2026-08-19T12:16:58 **
+** Report includes: Errors, Warnings **
+
+** Found 14 DRC violations **
+[lib_footprint_mismatch]: Footprint 'Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias' does not match copy in library 'Package_SO'
+    Local override; warning
+    @(161.8645 mm, 105.7955 mm): Footprint U1
+[lib_footprint_mismatch]: Footprint 'SOT-23-3' does not match copy in library 'Package_TO_SOT_SMD'
+    Local override; warning
+    @(164.8460 mm, 123.7995 mm): Footprint Q1
+[lib_footprint_mismatch]: Footprint 'SOT-23' does not match copy in library 'Package_TO_SOT_SMD'
+    Local override; warning
+    @(169.5935 mm, 123.7335 mm): Footprint Q2
+[lib_footprint_mismatch]: Footprint 'TO-252-2' does not match copy in library 'Package_TO_SOT_SMD'
+    Local override; warning
+    @(158.0190 mm, 96.3815 mm): Footprint Q3
+[lib_footprint_mismatch]: Footprint 'TSOT-23-6' does not match copy in library 'Package_TO_SOT_SMD'
+    Local override; warning
+    @(152.4460 mm, 118.2775 mm): Footprint U2
+[lib_footprint_mismatch]: Footprint 'SolderWirePad_1x01_SMD_4x8mm' does not match copy in library 'Connector_Wire'
+    Local override; warning
+    @(150.3680 mm, 87.6300 mm): Footprint J5
+[lib_footprint_mismatch]: Footprint 'uc_potentiometer' does not match copy in library 'pendulum_footprints'
+    Local override; warning
+    @(144.7800 mm, 138.2775 mm): Footprint RV1
+[lib_footprint_mismatch]: Footprint 'SolderWirePad_1x01_SMD_4x8mm' does not match copy in library 'Connector_Wire'
+    Local override; warning
+    @(159.2580 mm, 87.6300 mm): Footprint J4
+[lib_footprint_mismatch]: Footprint 'RaspberryPi_Pico_Common_THT' does not match copy in library 'Module'
+    Local override; warning
+    @(121.1580 mm, 72.1360 mm): Footprint A1
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(137.2800 mm, 135.7775 mm): Rectangle of RV1 on F.Silkscreen
+    @(137.2800 mm, 140.7775 mm): Segment on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(172.8475 mm, 113.6272 mm): Segment on F.Silkscreen
+    @(180.8875 mm, 110.8815 mm): Segment of J3 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(172.8475 mm, 110.8815 mm): Segment of J3 on F.Silkscreen
+    @(172.8475 mm, 113.6272 mm): Segment on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(172.8475 mm, 110.8815 mm): Segment of J3 on F.Silkscreen
+    @(164.5920 mm, 100.9395 mm): Segment on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(152.2800 mm, 140.7775 mm): Segment on F.Silkscreen
+    @(137.2800 mm, 135.7775 mm): Rectangle of RV1 on F.Silkscreen
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
