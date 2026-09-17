@@ -1,5 +1,5 @@
-![Alt text](Schematics_&_PCB/pcb.jpg)
 # Reaction Wheel Inverted Pendulum
+![Alt text](Schematics_&_PCB/pcb.jpg)
 
 ## How it works
 

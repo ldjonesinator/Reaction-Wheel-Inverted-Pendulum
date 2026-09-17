@@ -5008,7 +5008,7 @@
 		)
 		(uuid "fd631c37-a1df-4a4b-a313-8ce4102ea4bb")
 	)
-	(text "Supply with RVP & Voltage reading"
+	(text "Supply with RPP & Voltage reading"
 		(exclude_from_sim no)
 		(at 53.848 138.938 0)
 		(effects
