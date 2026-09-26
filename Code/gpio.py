@@ -18,7 +18,7 @@ CONTROL_SW_PIN.direction = digitalio.Direction.INPUT # already has pull up
 
 SW_LED_PIN = digitalio.DigitalInOut(board.GP11)
 SW_LED_PIN.direction = digitalio.Direction.OUTPUT
-SW_LED_PIN.value = True
+SW_LED_PIN.value = False
 
 # motor pins
 PWM_IN1 = pwmio.PWMOut(board.GP20, frequency=1000, duty_cycle=0)
