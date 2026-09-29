@@ -12,6 +12,9 @@ POT_PIN = analogio.AnalogIn(board.A0)
 
 class Pot:
     def __init__(self):
+        self.reset()
+
+    def reset(self):
         self.prev_val = POT_PIN.value
 
     def get_pot_percentage(self):

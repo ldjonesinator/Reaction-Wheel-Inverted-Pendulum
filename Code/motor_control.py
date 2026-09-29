@@ -13,7 +13,14 @@ MOTOR_PWM1 = pwmio.PWMOut(board.GP20, frequency=MOTOR_FREQ, duty_cycle=0)
 MOTOR_PWM2 = pwmio.PWMOut(board.GP21, frequency=MOTOR_FREQ, duty_cycle=0)
 
 
+def stop():
+    MOTOR_PWM1.duty_cycle = 0
+    MOTOR_PWM2.duty_cycle = 0
+
 def turn_on(on):
+    if not on:
+        stop()
+
     MOTOR_SW_PIN.value = on
 
 def set_speed(speed):
@@ -29,5 +36,4 @@ def set_speed(speed):
             MOTOR_PWM2.duty_cycle = int(abs(speed) * PIN_RES / 100)
 
         else:
-            MOTOR_PWM1.duty_cycle = 0
-            MOTOR_PWM2.duty_cycle = 0
+            stop()

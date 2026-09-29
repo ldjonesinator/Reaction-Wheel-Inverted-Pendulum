@@ -26,7 +26,7 @@ PWM_LED2 = pwmio.PWMOut(board.GP12, frequency=LED_FREQ, duty_cycle=0)
 
 
 def set_control_led_brightness(led, pwm):
-    pwm = int(max(-100, min(100, pwm)))
+    pwm = int(min(abs(pwm), 100))
     if led == 1:
         PWM_LED1.duty_cycle = int(pwm * PIN_RES / 100)
     elif led == 2:
