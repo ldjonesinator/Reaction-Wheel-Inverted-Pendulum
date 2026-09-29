@@ -1,7 +1,10 @@
 import time
 
 import gpio
+import button_control as btn
 
+button = btn.Button()
+toggle = True
 i = 1
 brightness = 50
 control_toggle = False
@@ -37,30 +40,13 @@ PWM_IN2 = pwmio.PWMOut(board.GP21, frequency=1000, duty_cycle=0)
 
 
 while True:
-    if gpio.is_vin_correct():
-        gpio.turn_motor_on(True)
-    else:
-        gpio.turn_motor_on(False)
+    button.update(gpio.check_control_switch())
 
-    if debounce <= 0:
-        if gpio.check_control_switch():
-            control_toggle = not control_toggle
-            gpio.switch_led_on(control_toggle)
-            debounce = 50
-    else:
-        debounce -= 1
-
-
-    if control_toggle:
-        if motor_speed != gpio.get_pot_percentage() * 2 - 100:
-            motor_speed = gpio.get_pot_percentage() * 2 - 100
-            gpio.set_motor_speed(motor_speed)
-    else:
-        gpio.set_motor_speed(0) # motor control with pot
-        gpio.set_control_led_brightness(1, (brightness + i) % 100)
-        gpio.set_control_led_brightness(2, (brightness - i) % 100)
-        i += 1
-
+    if button.check_state() == "released":
+        gpio.switch_led_on(toggle)
+        toggle = not toggle
+    
+    time.sleep(0.02)
         POT_VALUE = pot.value
     
     CHANGE = POT_VALUE - PREVIOUS_POT
