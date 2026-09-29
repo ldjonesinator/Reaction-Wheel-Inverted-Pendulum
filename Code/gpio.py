@@ -32,23 +32,23 @@ ADC_VIN = analogio.AnalogIn(board.A1)
 
 
 def set_motor_speed(speed):
+    if MOTOR_SW_PIN.value:
+        # Limit speed to -100%-100%
+        speed = int(max(-100, min(100, speed)))
 
-    # Limit speed to -100%-100%
-    speed = int(max(-100, min(100, speed)))
+        # Set PWM duty cycle
+        if speed > 0:
+            PWM_IN1.duty_cycle = int(speed * PIN_RES / 100)
+            PWM_IN2.duty_cycle = 0
 
-    # Set PWM duty cycle
-    if speed > 0:
-        PWM_IN1.duty_cycle = int(speed * PIN_RES / 100)
-        PWM_IN2.duty_cycle = 0
+        elif speed < 0:
+            PWM_IN1.duty_cycle = 0
+            PWM_IN2.duty_cycle = int(abs(speed) * PIN_RES / 100)
 
-    elif speed < 0:
-        PWM_IN1.duty_cycle = 0
-        PWM_IN2.duty_cycle = int(abs(speed) * PIN_RES / 100)
-
-    else:
-        #Stop
-        PWM_IN1.duty_cycle = 0
-        PWM_IN2.duty_cycle = 0
+        else:
+            #Stop
+            PWM_IN1.duty_cycle = 0
+            PWM_IN2.duty_cycle = 0
 
 def set_control_led_brightness(led, pwm):
     pwm = int(max(-100, min(100, pwm)))
@@ -70,4 +70,7 @@ def turn_motor_on(on):
 
 def check_control_switch():
     # pin is pull up so switch off means HIGH
-    return CONTROL_SW_PIN.value
+    return not CONTROL_SW_PIN.value
+
+def get_pot_percentage():
+    return int(100 * POT_PIN.value / PIN_RES)
