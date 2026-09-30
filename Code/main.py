@@ -11,15 +11,14 @@ from pot_control import POT_GAIN
 
 # Third Euler value when the arm is exactly upright.
 REF_ANGLE = 0
-EULER_ANGLE_DIMENSION = 1
 
 
 LOOP_TIME = 0.02
 ANGLE_LIMIT = 90.0
 
 
-KP = 1.0 #NOT 2
-KI = 1.0 # must be > 1
+KP = 20.0 #NOT 2
+KI = 0.0 # must be > 1
 KD = 0.0
 
 
@@ -81,32 +80,17 @@ def wrap_angle(angle):
 def set_clamped_motor_speed(command):
 
     command = clamp(command, -100.0, 100.0)
-    magnitude = abs(command)
-
-    if magnitude < 0.5:
+    
+    if abs(command) < 0.5:
         motor.stop()
         return 0.0
 
-    if DEADZONE_REMAP:
-        duty_percent = MIN_PWM + (MAX_PWM - MIN_PWM) * magnitude / 100.0
-    else:
-        duty_percent = clamp(magnitude, MIN_PWM, MAX_PWM)
-
-    duty_percent = clamp(duty_percent, 0.0, MAX_PWM)
-
-    motor.set_speed(duty_percent)
-    if command > 0:
-        return duty_percent
-
-    return -duty_percent
-
+    motor.set_speed(command)
+    return command
 
 
 def update_direction_leds(command):
-    brightness = int(
-        clamp(abs(command) / MAX_PWM, 0.0, 1.0)
-        * 65535
-    )
+    brightness = abs(command)
 
     if command > 0:
         gpio.set_control_led_brightness(1, brightness)
@@ -142,6 +126,10 @@ i_term = 0.0
 d_term = 0.0
 
 previous_ns = time.monotonic_ns()
+
+
+
+
 
 while True:
     motor_running = input_volt_check(motor_running)
@@ -190,6 +178,7 @@ while True:
         previous_ns = now_ns
 
         angle = imu.read_angle()
+        print(angle)
 
         if angle is None:
             tilt = None
@@ -199,7 +188,7 @@ while True:
         else:
             tilt = wrap_angle(angle - REF_ANGLE)
             control_allowed = abs(tilt) <= ANGLE_LIMIT
-
+            
             if control_allowed:
                 status = "CONTROL ACTIVE"
             else:
@@ -220,7 +209,7 @@ while True:
                 )
 
             error = tilt - target_angle
-
+           # print(error)
             if 0.0 < dt < 0.1:
                 # Filtered derivative of the error.
                 raw_derivative = (error - previous_error) / dt
@@ -235,7 +224,7 @@ while True:
             p_term = KP * error
             i_term = KI * integral
             d_term = KD * derivative
-
+           # print(p_term, i_term, d_term)
             if abs(error) <= ANGLE_DEAD_BAND:
                 requested_command = 0.0
             else:

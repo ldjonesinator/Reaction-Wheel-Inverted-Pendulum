@@ -4,7 +4,7 @@ import analogio
 import pwmio
 
 PIN_RES = 65535
-LED_FREQ = 50
+LED_FREQ = 100
 PICO_VOLT_REF = 3.3
 
 # using voltage divider to get low and high input voltage boundaries

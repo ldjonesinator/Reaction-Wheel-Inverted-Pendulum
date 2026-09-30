@@ -3,7 +3,7 @@ import digitalio
 import pwmio
 from gpio import PIN_RES
 
-MOTOR_FREQ = 1000
+MOTOR_FREQ = 20000
 
 MOTOR_SW_PIN = digitalio.DigitalInOut(board.GP17)
 MOTOR_SW_PIN.direction = digitalio.Direction.OUTPUT
@@ -26,14 +26,14 @@ def turn_on(on):
 def set_speed(speed):
     if MOTOR_SW_PIN.value: # don't try if switch isn't closed
         speed = int(max(-100, min(100, speed)))
-
+        #print(speed)
         if speed > 0:
-            MOTOR_PWM1.duty_cycle = int(speed * PIN_RES / 100)
+            MOTOR_PWM1.duty_cycle = int(speed * PIN_RES / 100.0)
             MOTOR_PWM2.duty_cycle = 0
 
         elif speed < 0:
             MOTOR_PWM1.duty_cycle = 0
-            MOTOR_PWM2.duty_cycle = int(abs(speed) * PIN_RES / 100)
+            MOTOR_PWM2.duty_cycle = int(abs(speed) * PIN_RES / 100.0)
 
         else:
             stop()
