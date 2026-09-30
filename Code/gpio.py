@@ -9,7 +9,7 @@ PICO_VOLT_REF = 3.3
 
 # using voltage divider to get low and high input voltage boundaries
 H_BRIDGE_VL = 12 * 10 / 92
-H_BRIDGE_VH = 12.5 * 10 / 92
+H_BRIDGE_VH = 13 * 10 / 92
 
 # adc input voltage reading from voltage divider
 ADC_VIN = analogio.AnalogIn(board.A1)

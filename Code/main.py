@@ -9,21 +9,49 @@ import button_control as btn
 import pot_control as pot
 from pot_control import POT_GAIN
 
+# Third Euler value when the arm is exactly upright.
+REF_ANGLE = 0
+EULER_ANGLE_DIMENSION = 1
 
-
-KP = 6 #5 is good
-KD = 0.01
-REF_ANGLE = 180
-
-# motor command
-MIN_PWM = 60
-MAX_PWM = 100
-MAX_ANGLE = 20.0 # Doesn't work if goes over this from ref
-ANGLE_DEAD_BAND = 0.5
-REVERSE_MOTOR = True
 
 LOOP_TIME = 0.02
-PRINT_TIME = 0.2
+ANGLE_LIMIT = 90.0
+
+
+KP = 1.0 #NOT 2
+KI = 1.0 # must be > 1
+KD = 0.0
+
+
+# The integral term can never contribute more than this many percent
+# (anti-windup).
+INTEGRAL_LIMIT = 100.0
+
+# Derivative low-pass filter: 1.0 = raw derivative, smaller = smoother.
+# The BNO055 angle is quantised to 1/16 degree, so raw derivatives are
+# noisy.
+DERIV_FILTER = 0.15
+
+# No motor output while the error is inside this many degrees.
+ANGLE_DEAD_BAND = 0.10
+
+# ----- Target-angle dithering (Brick's ANGLE_FIXRATE) -------------
+# Each loop the target angle is nudged away from the measured angle,
+# which keeps the error (and so the wheel acceleration) from settling at
+# zero. Brick uses 1.0 deg/s. Leave at 0.0 (off) until P and D work.
+ANGLE_FIXRATE = 0.0
+# The target can never move further than this from upright (degrees).
+TARGET_LIMIT = 10.0
+
+MIN_PWM = 0.0
+MAX_PWM = 100.0
+
+# True:  a 0-100% command is stretched over MIN_PWM..MAX_PWM, so small
+#        commands give small (but moving) output.
+# False: old behaviour - anything below MIN_PWM is lifted to MIN_PWM.
+DEADZONE_REMAP = True
+
+REVERSE_MOTOR = False
 PWM_FREQUENCY = 20000
 
 
@@ -37,35 +65,41 @@ def input_volt_check(was_motor_on):
     # turn on HSS if wasn't on already, vice versa
     if gpio.is_vin_correct() and not was_motor_on:
         motor.turn_on(True)
-        was_motor_on = True
+        return True
     elif not gpio.is_vin_correct() and was_motor_on:
         motor.turn_on(False)
-        was_motor_on = False
+        return False
 
 def clamp(value, minimum, maximum):
     return max(minimum, min(maximum, value))
 
+def wrap_angle(angle):
+    """Wrap an angle difference into -180...+180 degrees."""
+    return (angle + 180.0) % 360.0 - 180.0
 
-def get_angle_error(reference, measured):
-    return (reference - measured + 180.0) % 360.0 - 180.0
 
+def set_clamped_motor_speed(command):
 
-def set_clamped_motor_speed(speed):
-    speed = clamp(speed, -MAX_PWM, MAX_PWM)
+    command = clamp(command, -100.0, 100.0)
+    magnitude = abs(command)
 
-    if abs(speed) < 0.5:
+    if magnitude < 0.5:
         motor.stop()
         return 0.0
 
-    if abs(speed) < MIN_PWM:
-        if speed > 0:
-            speed = MIN_PWM
-        else:
-            speed = -MIN_PWM
+    if DEADZONE_REMAP:
+        duty_percent = MIN_PWM + (MAX_PWM - MIN_PWM) * magnitude / 100.0
+    else:
+        duty_percent = clamp(magnitude, MIN_PWM, MAX_PWM)
 
-    motor.set_speed(speed)
+    duty_percent = clamp(duty_percent, 0.0, MAX_PWM)
 
-    return speed
+    motor.set_speed(duty_percent)
+    if command > 0:
+        return duty_percent
+
+    return -duty_percent
+
 
 
 def update_direction_leds(command):
@@ -91,34 +125,53 @@ motor_running = False
 prev_speed = 0
 user_mode = USER_MODES["MANUAL"]
 
-input_volt_check(motor_running)
+motor_running = input_volt_check(motor_running)
 update_direction_leds(0.0)
 
-time.sleep(3.0) # delay for initialisation of io and user
+time.sleep(1.0) # delay for initialisation of io and user
 
 command = 0.0
+tilt = None                # degrees from upright (+ when angle > REF_ANGLE)
+target_angle = 0.0         # degrees from upright, moved by dithering
+error = 0.0
 previous_error = 0.0
-previous_time = time.monotonic()
-last_print_time = previous_time
+integral = 0.0
+derivative = 0.0
+p_term = 0.0
+i_term = 0.0
+d_term = 0.0
+
+previous_ns = time.monotonic_ns()
 
 while True:
-    input_volt_check()
+    motor_running = input_volt_check(motor_running)
 
     mode_btn.update(gpio.check_control_switch())
 
     if mode_btn.check_state() == "released":
-        user_mode = (user_mode + 1) % len(USER_MODES) # rotate through modes
-        gpio.switch_led_on(user_mode % 2 == 1)
+        # user_mode = (user_mode + 1) % len(USER_MODES) # rotate through modes
+        # gpio.switch_led_on(user_mode % 2 == 1)
+        if user_mode != USER_MODES["PID"]:
+            user_mode = USER_MODES["PID"]
+            gpio.switch_led_on(True)
+        else:
+            USER_MODES["MANUAL"]
+            # gpio.switch_led_on(False)
 
         # resetting everyting
         user_pot.reset()
         command = 0.0
         previous_error = 0.0
-        previous_time = time.monotonic()
-        last_print_time = previous_time
-        update_direction_leds(0.0)
+        previous_ns = time.monotonic()
         motor.stop()
-
+        update_direction_leds(0.0)
+        target_angle = 0.0
+        integral = 0.0
+        derivative = 0.0
+        error = 0.0
+        p_term = 0.0
+        i_term = 0.0
+        d_term = 0.0
 
 
     if user_mode == USER_MODES["MANUAL"]:
@@ -132,27 +185,20 @@ while True:
 
 
     elif user_mode == USER_MODES["PID"]:
-        loop_start = time.monotonic()
-
-        dt = loop_start - previous_time
-        previous_time = loop_start
+        now_ns = time.monotonic_ns()
+        dt = (now_ns - previous_ns) / 1e9
+        previous_ns = now_ns
 
         angle = imu.read_angle()
 
         if angle is None:
-            error = 0.0
+            tilt = None
             control_allowed = False
             status = "NO IMU DATA"
 
         else:
-            error = get_angle_error(
-                REF_ANGLE,
-                angle
-            )
-
-            control_allowed = (
-                abs(error) <= MAX_ANGLE
-            )
+            tilt = wrap_angle(angle - REF_ANGLE)
+            control_allowed = abs(tilt) <= ANGLE_LIMIT
 
             if control_allowed:
                 status = "CONTROL ACTIVE"
@@ -160,54 +206,66 @@ while True:
                 status = "ANGLE TOO LARGE"
 
 
-        # Control system active
         if control_allowed:
-            if not motor_running:
-                motor.turn_on(True)
 
-                # Prevent a derivative spike during startup.
-                previous_error = error
-                motor_running = True
+            # Dither the target away from the measured angle.
+            if ANGLE_FIXRATE > 0.0:
+                if tilt < target_angle:
+                    target_angle += ANGLE_FIXRATE * dt
+                else:
+                    target_angle -= ANGLE_FIXRATE * dt
+
+                target_angle = clamp(
+                    target_angle, -TARGET_LIMIT, TARGET_LIMIT
+                )
+
+            error = tilt - target_angle
 
             if 0.0 < dt < 0.1:
-                derivative = (
-                    error - previous_error
-                ) / dt
-            else:
-                derivative = 0.0
+                # Filtered derivative of the error.
+                raw_derivative = (error - previous_error) / dt
+                derivative += DERIV_FILTER * (raw_derivative - derivative)
+
+                # Integral with anti-windup clamp.
+                if KI > 0.0 and abs(error) > ANGLE_DEAD_BAND:
+                    integral += error * dt
+                    limit = INTEGRAL_LIMIT / KI
+                    integral = clamp(integral, -limit, limit)
+
+            p_term = KP * error
+            i_term = KI * integral
+            d_term = KD * derivative
 
             if abs(error) <= ANGLE_DEAD_BAND:
                 requested_command = 0.0
             else:
-                requested_command = (
-                    KP * error
-                    + KD * derivative
-                )
+                requested_command = p_term + i_term + d_term
 
             if REVERSE_MOTOR:
                 requested_command = -requested_command
 
-            command = set_clamped_motor_speed(
-                requested_command
-            )
+            command = set_clamped_motor_speed(requested_command)
 
             update_direction_leds(command)
 
-
             previous_error = error
 
 
-        #control system disabled
         else:
-            motor.turn_on(False)
+            motor.stop()
             update_direction_leds(0.0)
 
             command = 0.0
-            motor_running = False
-            previous_error = error
+            target_angle = 0.0
+            integral = 0.0
+            derivative = 0.0
+            error = 0.0
+            p_term = 0.0
+            i_term = 0.0
+            d_term = 0.0
 
-        # Maintain approximately 50 Hz.
-        elapsed = time.monotonic() - loop_start
+        # Maintain the loop period.
+        elapsed = (time.monotonic_ns() - now_ns) / 1e9
         remaining = LOOP_TIME - elapsed
 
         if remaining > 0:
