@@ -69,6 +69,8 @@ def input_volt_check(was_motor_on):
         motor.turn_on(False)
         return False
 
+    return was_motor_on
+
 def clamp(value, minimum, maximum):
     return max(minimum, min(maximum, value))
 
