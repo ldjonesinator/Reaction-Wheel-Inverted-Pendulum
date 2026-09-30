@@ -118,6 +118,13 @@ def update_direction_leds(command):
 
 motor_running = False
 prev_speed = 0
+pot_gain = 5
+pin_res = 65535      
+speed_ramp_down = 1.0     
+current_speed = 0.0
+change_threshold = 100
+target_speed = 0
+current_speed = 0
 user_mode = USER_MODES["MANUAL"]
 
 motor_running = input_volt_check(motor_running)
@@ -164,13 +171,34 @@ while True:
 
 
     if user_mode == USER_MODES["MANUAL"]:
-        pot_change = user_pot.get_pot_change()
-        speed = int(100 * pot_change * POT_GAIN / PIN_RES)
-        if speed != prev_speed:
-            motor.set_speed(speed)
-            prev_speed = speed
+        change = user_pot.get_pot_change()
 
-        time.sleep(0.01)
+        if change > change_threshold:
+            target_speed = min((change * (pot_gain * imu.read_angle()) / pin_res) * 100, 100)
+        
+        elif change < -change_threshold:
+            target_speed = max((change * (pot_gain * imu.read_angle()) / pin_res) * 100, -100)
+
+        else:
+            target_speed = 0
+
+        if target_speed != 0:
+            current_speed = target_speed
+
+        elif current_speed > 0:
+            current_speed -= speed_ramp_down
+            current_speed = max(current_speed, 0)
+
+        elif current_speed < 0:
+            current_speed += speed_ramp_down
+            current_speed = min(current_speed, 0)
+
+        
+        if current_speed != prev_speed:
+            motor.set_speed(current_speed)
+            prev_speed = current_speed
+
+        time.sleep(0.02)
 
 
     elif user_mode == USER_MODES["PID"]:
