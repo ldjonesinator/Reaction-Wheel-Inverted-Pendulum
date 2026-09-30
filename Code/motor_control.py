@@ -18,22 +18,20 @@ def stop():
     MOTOR_PWM2.duty_cycle = 0
 
 def turn_on(on):
-    if not on:
-        stop()
-
+    stop()
     MOTOR_SW_PIN.value = on
 
 def set_speed(speed):
-    if MOTOR_SW_PIN.value: # don't try if switch isn't closed
-        speed = int(max(-100, min(100, speed)))
-        #print(speed)
-        if speed > 0:
-            MOTOR_PWM1.duty_cycle = int(speed * PIN_RES / 100.0)
-            MOTOR_PWM2.duty_cycle = 0
+    # if MOTOR_SW_PIN.value: # don't try if switch isn't closed
+    speed = int(max(-100, min(100, speed)))
+    #print(speed)
+    if speed > 0:
+        MOTOR_PWM2.duty_cycle = 0
+        MOTOR_PWM1.duty_cycle = int(speed * PIN_RES / 100.0)
 
-        elif speed < 0:
-            MOTOR_PWM1.duty_cycle = 0
-            MOTOR_PWM2.duty_cycle = int(abs(speed) * PIN_RES / 100.0)
+    elif speed < 0:
+        MOTOR_PWM1.duty_cycle = 0
+        MOTOR_PWM2.duty_cycle = int(abs(speed) * PIN_RES / 100.0)
 
-        else:
-            stop()
+    else:
+        stop()

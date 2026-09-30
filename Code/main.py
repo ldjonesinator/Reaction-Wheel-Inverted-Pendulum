@@ -80,13 +80,22 @@ def wrap_angle(angle):
 def set_clamped_motor_speed(command):
 
     command = clamp(command, -100.0, 100.0)
-    
-    if abs(command) < 0.5:
+    magnitude = abs(command)
+
+    if magnitude < 0.5:
         motor.stop()
         return 0.0
 
-    motor.set_speed(command)
-    return command
+    if DEADZONE_REMAP:
+        duty_percent = MIN_PWM + (MAX_PWM - MIN_PWM) * magnitude / 100.0
+    else:
+        duty_percent = clamp(magnitude, MIN_PWM, MAX_PWM)
+
+    if command < 0:
+        duty_percent = -duty_percent
+
+    motor.set_speed(duty_percent)    
+    return duty_percent
 
 
 def update_direction_leds(command):
@@ -128,23 +137,14 @@ d_term = 0.0
 previous_ns = time.monotonic_ns()
 
 
-
-
-
 while True:
     motor_running = input_volt_check(motor_running)
 
     mode_btn.update(gpio.check_control_switch())
 
     if mode_btn.check_state() == "released":
-        # user_mode = (user_mode + 1) % len(USER_MODES) # rotate through modes
-        # gpio.switch_led_on(user_mode % 2 == 1)
-        if user_mode != USER_MODES["PID"]:
-            user_mode = USER_MODES["PID"]
-            gpio.switch_led_on(True)
-        else:
-            USER_MODES["MANUAL"]
-            # gpio.switch_led_on(False)
+        user_mode = (user_mode + 1) % len(USER_MODES) # rotate through modes
+        gpio.switch_led_on(user_mode % 2 == 1)
 
         # resetting everyting
         user_pot.reset()
@@ -153,7 +153,6 @@ while True:
         previous_ns = time.monotonic()
         motor.stop()
         update_direction_leds(0.0)
-        target_angle = 0.0
         integral = 0.0
         derivative = 0.0
         error = 0.0
@@ -183,32 +182,15 @@ while True:
         if angle is None:
             tilt = None
             control_allowed = False
-            status = "NO IMU DATA"
 
         else:
             tilt = wrap_angle(angle - REF_ANGLE)
             control_allowed = abs(tilt) <= ANGLE_LIMIT
-            
-            if control_allowed:
-                status = "CONTROL ACTIVE"
-            else:
-                status = "ANGLE TOO LARGE"
 
 
         if control_allowed:
 
-            # Dither the target away from the measured angle.
-            if ANGLE_FIXRATE > 0.0:
-                if tilt < target_angle:
-                    target_angle += ANGLE_FIXRATE * dt
-                else:
-                    target_angle -= ANGLE_FIXRATE * dt
-
-                target_angle = clamp(
-                    target_angle, -TARGET_LIMIT, TARGET_LIMIT
-                )
-
-            error = tilt - target_angle
+            error = tilt
            # print(error)
             if 0.0 < dt < 0.1:
                 # Filtered derivative of the error.
@@ -245,7 +227,6 @@ while True:
             update_direction_leds(0.0)
 
             command = 0.0
-            target_angle = 0.0
             integral = 0.0
             derivative = 0.0
             error = 0.0
