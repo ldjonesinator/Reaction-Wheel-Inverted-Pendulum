@@ -5018,9 +5018,9 @@
 		)
 		(uuid "1d2f11d3-6f52-4d94-b076-ec3fb4aef08f")
 	)
-	(text "5/330 = 15mA"
+	(text "5/180 = 27.8mA"
 		(exclude_from_sim no)
-		(at 309.372 209.804 0)
+		(at 310.134 209.804 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5160,7 +5160,7 @@
 	)
 	(text "Raspberry Pi Pico connections"
 		(exclude_from_sim no)
-		(at 187.96 81.28 0)
+		(at 175.514 81.534 0)
 		(effects
 			(font
 				(size 2 2)
